@@ -37,7 +37,8 @@ public class Assignment1 {
 		System.out.println("Phone is : " + phone);
 		System.out.println("Education is : " + education);
 		System.out.println("Income is : " + income);
-		System.out.println("Age is : " + age);
+		System.out.println("Age is : " + age); 
+		
 
 		
 	}
