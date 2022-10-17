@@ -38,7 +38,6 @@ public class Assignment1 {
 		System.out.println("Education is : " + education);
 		System.out.println("Income is : " + income);
 		System.out.println("Age is : " + age); 
-		int day4 =1;
 		
 
 		
