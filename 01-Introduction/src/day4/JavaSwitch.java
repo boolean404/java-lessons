@@ -24,6 +24,6 @@ public class JavaSwitch {
 		default:
 			catName = "unknow";
 		}
-		System.out.print(name + " is " + catName);
+		System.out.print(name + " is " + catName); 
 	}
 }
