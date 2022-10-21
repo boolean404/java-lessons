@@ -15,19 +15,27 @@ public class Assignment2 {
 		String userInputSentence = ReuseableMethods.userInputValidation(sc);
 
 		String[] strArr = userInputSentence.split(" ");
-		if (userInputSentence.endsWith("?")) {
-			System.out.println("\nThe first word of user input is : " + strArr[0]);
-			String[] questionWords = { "Do", "Does", "Are", "Can", "Will", "May", "Shall", "Must", "Have", "Has" };
 
-			for (String qWord : questionWords) {
-				if (userInputSentence.contains(qWord)) {
-					System.out.println("Your input sentence is a simple present question.");
-				}
+		String[] questionWords = { "Do", "Does", "Are", "Can", "Will", "May", "Shall", "Must", "Have", "Has", "How",
+				"What", "When", "Where", "Is", "Which" };
+		boolean isQueation = true;
+
+		System.out.println("\n----------- Output ----------");
+		for (String qWord : questionWords) {
+			if (userInputSentence.contains(qWord) && userInputSentence.endsWith("?")) {
+				System.out.println("The first word of user input is : " + strArr[0]);
+				System.out.println("Your input sentence is a simple present question.");
+				isQueation = true;
+				break;
+			} else {
+				isQueation = false;
 			}
-		} else {
-			System.out.println("\nYour input sentence isn't a question sentence.");
 		}
-		System.out.println("\n----------- Bye ----------");
+		if (!isQueation) {
+			System.out.println("Your input sentence isn't a complete question sentence.");
+		}
+		System.out.println("----------- Bye ----------");
+
 	}
 }
 
@@ -40,6 +48,7 @@ class ReuseableMethods {
 			System.out.print("Please input a complete sentence : ");
 			inpStr = sc.nextLine();
 		}
+
 		return inpStr;
 
 	}
