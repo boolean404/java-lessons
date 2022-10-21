@@ -23,7 +23,8 @@ public class Assignment2 {
 		System.out.println("\n----------- Output ----------");
 		for (String qWord : questionWords) {
 			if (userInputSentence.contains(qWord) && userInputSentence.endsWith("?")) {
-				System.out.println("The first word of user input is : " + strArr[0]);
+				System.out.println("Your input sentence is : " + userInputSentence);
+				System.out.println("The first word of your input is : " + strArr[0]);
 				System.out.println("Your input sentence is a simple present question.");
 				isQueation = true;
 				break;
@@ -32,7 +33,7 @@ public class Assignment2 {
 			}
 		}
 		if (!isQueation) {
-			System.out.println("Your input sentence isn't a complete question sentence.");
+			System.out.println("Your input sentence is : " + userInputSentence);
 		}
 		System.out.println("----------- Bye ----------");
 
