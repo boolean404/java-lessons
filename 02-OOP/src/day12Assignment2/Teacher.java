@@ -5,12 +5,6 @@ public class Teacher extends Person {
 	private String position, department;
 	private int salary;
 
-//	public Teacher(String position, String department, int salary) {
-//		this.position = position;
-//		this.department = department;
-//		this.salary = salary;
-//	}
-
 	public Teacher(String name, String nrcNo, String address, String phone, String position, String department,
 			int salary) {
 		super(name, nrcNo, address, phone);
