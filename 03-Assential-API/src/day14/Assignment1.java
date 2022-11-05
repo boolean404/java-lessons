@@ -158,7 +158,7 @@ public class Assignment1 {
 
 					while (!yOeValue.equals("y") && !yOeValue.equals("e")) {
 						System.err.print("Press 'y' or 'e' only, try again : ");
-						sc.next();
+						yOeValue = sc.next();
 					}
 					if (yOeValue.equals("y")) {
 						restartStatus = true;
