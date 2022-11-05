@@ -77,6 +77,7 @@ public class Assignment1 {
 					System.out.print("Enter a student's name : => ");
 					sc.nextLine();
 					String inpStuName = sc.nextLine();
+					Collections.sort(studentList);
 					int stuIndex = Collections.binarySearch(studentList, inpStuName);
 					System.out.println((stuIndex >= 0)
 							? "=> Your searched student name '" + inpStuName + "' is at position '" + stuIndex + "'."
