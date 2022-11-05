@@ -72,7 +72,7 @@ public class Assignment1 {
 					studentList.forEach(stu -> System.out.println("=> " + stu));
 					break;
 				}
-				case 4: { // search a index of student
+				case 4: { // search a index of student 
 					System.out.println("------------- Search a specified student -----------");
 					System.out.print("Enter a student's name : => ");
 					sc.nextLine();
