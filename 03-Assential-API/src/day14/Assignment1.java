@@ -145,8 +145,6 @@ public class Assignment1 {
 					break;
 				}
 				case 9: { // exit from the class
-					System.out.println("------------- Exited from the class -----------");
-					System.out.println("=> Bye ;)");
 					restartStatus = false;
 					return;
 				}
