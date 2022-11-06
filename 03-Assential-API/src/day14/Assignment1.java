@@ -106,11 +106,14 @@ public class Assignment1 {
 				case 6: { // search names with start letter
 					System.out.println("------------- Search Students' name who start with letter -----------");
 					System.out.print("Enter the first letter of the students name : => ");
+					ArrayList<String> stuList = new ArrayList<String>();
+					studentList.forEach(stu -> stuList.add(stu));
+					
 					String inpLetter = sc.next();
-					studentList.removeIf(
+					stuList.removeIf(
 							t -> (!t.startsWith(inpLetter.toUpperCase()) && !t.startsWith(inpLetter.toLowerCase())));
 					System.out.println("Start with letter '" + inpLetter + "' names are under the followings.");
-					studentList.forEach(stu -> {
+					stuList.forEach(stu -> {
 						System.out.println("=> " + stu);
 					});
 					break;
