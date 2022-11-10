@@ -112,7 +112,7 @@ public class SetAssignment {
 
                     case 4: {
                         System.out.println("============= Display All Students ==============");
-                        System.out.println("Roll No. Name");
+                        System.out.println("\nRoll No. Name");
                         System.out.println("=============");
                         students.forEach(stu -> {
                             System.out.println(stu.getRollNum() + "\t" + stu.getName());
@@ -161,8 +161,7 @@ public class SetAssignment {
                     }
 
                     case 7: {
-                        System.out.println(
-                                "============= Delete a Specific Student According to Roll No. ==============");
+                        System.out.println("============= Delete a Specific Student According to Roll No. ==============");
                         int oriSize = students.size();
 
                         System.out.print("Enter student Roll No. : => ");
