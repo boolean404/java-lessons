@@ -3,7 +3,7 @@ package day12Assignment1;
 import java.util.Scanner;
 
 public class Testing {
-	public static void main(String[] args) {
+	public static void main(String[] args) { 
 		System.out.println("------------------- Assignment 1 by Bo Bo Aung -----------------\n");
 		Scanner sc = new Scanner(System.in);
 		System.out.print("How many students do you want to add : ");

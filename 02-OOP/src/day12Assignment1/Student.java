@@ -7,7 +7,7 @@ public class Student {
 	private int mark;
 
 	// getter
-	public int getStudentId() {
+	public int getStudentId() { 
 		return studentId;
 	}
 
