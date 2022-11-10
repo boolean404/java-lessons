@@ -1,19 +1,17 @@
 package day15.MapAssignment;
 
 public class Student {
-    // private int rollNum;
+    private int rollNum;
     private String name;
 
-
-    public Student(String name) {
-        // this.rollNum = rollNum;
+    public Student(int rollNum, String name) {
+        this.rollNum = rollNum;
         this.name = name;
     }
 
     public Student() {
 
     }
-
 
     public String getName() {
         return name;
@@ -23,17 +21,11 @@ public class Student {
         this.name = name;
     }
 
-    // public int getRollNum() {
-    //     return rollNum;
-    // }
+    public int getRollNum() {
+        return rollNum;
+    }
 
     public void setRollNum(int rollNum) {
         this.rollNum = rollNum;
     }
-
-    public void insertStudent(int rollNum, String name) {
-        this.rollNum = rollNum;
-        this.name = name;
-    }
-
 }

@@ -60,13 +60,13 @@ public class SetAssignment {
                         System.out.println("============= Insert a new Student ==============");
                         System.out.print("Enter student roll number : => ");
                         int inpNewRoll = sc.nextInt();
-                        Set<Student> exitStu = new LinkedHashSet<Student>();
+                        Set<String> exitStu = new LinkedHashSet<>();
 
                         students.forEach(stu -> {
                             if (inpNewRoll == stu.getRollNum()) {
                                 System.err
                                         .println("Roll number " + inpNewRoll + " is exist, name with " + stu.getName());
-                                exitStu.add(new Student(stu.getRollNum(), stu.getName()));
+                                exitStu.add("Shi Tal");
                                 return;
                             }
                         });
