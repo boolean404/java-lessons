@@ -18,7 +18,8 @@ public class Testing {
 			System.out.print("Insert student ID :");
 			int stuId = sc.nextInt();
 			System.out.print("Insert student name :");
-			String name = sc.next();
+			sc.nextLine();
+			String name = sc.nextLine();
 			System.out.print("Insert student mark :");
 			int mark = sc.nextInt();
 
