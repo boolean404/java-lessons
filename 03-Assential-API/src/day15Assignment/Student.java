@@ -1,4 +1,4 @@
-package day15.MapAssignment;
+package day15Assignment;
 
 public class Student {
     private int rollNum;
@@ -28,4 +28,5 @@ public class Student {
     public void setRollNum(int rollNum) {
         this.rollNum = rollNum;
     }
+
 }
