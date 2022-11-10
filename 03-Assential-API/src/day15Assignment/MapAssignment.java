@@ -10,7 +10,7 @@ import java.util.TreeMap;
 
 public class MapAssignment {
     public static void main(String[] args) {
-        System.out.println("============== day15 Set Assignment by Bo Bo Aung =================");
+        System.out.println("============== day15 Map Assignment by Bo Bo Aung =================");
 
         // initial students
         Student stu1 = new Student(1, "U Hla");
