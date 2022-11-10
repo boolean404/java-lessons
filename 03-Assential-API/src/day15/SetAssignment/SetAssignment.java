@@ -163,13 +163,13 @@ public class SetAssignment {
                     case 7: {
                         System.out.println(
                                 "============= Delete a Specific Student According to Roll No. ==============");
-                        Set<Student> oldStuSet = new LinkedHashSet<Student>(students);
+                        int oriSize = students.size();
 
                         System.out.print("Enter student Roll No. : => ");
                         int inpStuRoll = sc.nextInt();
                         students.removeIf(s -> s.getRollNum() == inpStuRoll);
 
-                        if (oldStuSet.size() != students.size())
+                        if (oriSize != students.size())
                             System.out.println("=> Student with roll no. " + inpStuRoll + " is removed.");
                         else
                             System.err.println("=> There is no student to remove with roll number " + inpStuRoll);

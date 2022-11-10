@@ -7,6 +7,7 @@ import java.util.LinkedHashSet;
 import java.util.Map;
 import java.util.Scanner;
 import java.util.Set;
+import java.util.TreeMap;
 import java.util.TreeSet;
 
 public class MapAssignment {
@@ -66,50 +67,55 @@ public class MapAssignment {
                         System.out.println("============= Insert a new Student ==============");
                         System.out.print("Enter student roll number : => ");
                         int inpNewRoll = sc.nextInt();
-                        Map<Integer, Student> exitStu = new LinkedHashMap<>();
+                        Set<String> exitStu = new LinkedHashSet<>();
 
                         students.forEach((k, v) -> {
                             if (inpNewRoll == k) {
                                 System.err
                                         .println("Roll number " + inpNewRoll + " is exist, name with " +
                                                 v.getName());
-                                exitStu.put(k, new Student(k, v.getName()));
-                                
+                                exitStu.add("Shi Tal");
                                 return;
                             }
                         });
 
-                        // Set<Student> exitStu = new LinkedHashSet<Student>();
+                        if (exitStu.size() == 0) {
+                            System.out.print("Enter student name : => ");
+                            sc.nextLine();
+                            String inpNewName = sc.nextLine();
+                            students.put(inpNewRoll, new Student(inpNewRoll, inpNewName));
+                            System.out.println("=> " + inpNewName + " is added with roll number " +
+                                    inpNewRoll);
+                        }
 
-                        // students.forEach(stu -> {
-
-                        // });
-
-                        // if (exitStu.size() == 0) {
-                        // System.out.print("Enter student name : => ");
-                        // sc.nextLine();
-                        // String inpNewName = sc.nextLine();
-                        // students.add(new Student(inpNewRoll, inpNewName));
-                        // System.out.println("=> " + inpNewName + " is added with roll number " +
-                        // inpNewRoll);
-                        // }
                         break;
                     }
 
-                    // case 2: {
-                    // System.out.println("============= Sorting Students by Roll Number
-                    // ==============");
-                    // TreeSet<Student> stuRollSort = new TreeSet<>(new RollNumComparator());
-                    // stuRollSort.addAll(students);
+                    case 2: {
+                        // System.out.println("============= Sorting Students by Roll Number
+                        // ==============");
+                        // TreeMap<Integer,Student> stuRollSort = new TreeMap<>(new
+                        // RollNumComparator());
+                        // stuRollSort.putAll(students);
 
-                    // System.out.println("=> Sorted by students roll number.");
-                    // System.out.println("\nRoll No. Name");
-                    // System.out.println("=============");
-                    // stuRollSort.forEach(sts -> {
-                    // System.out.println(sts.getRollNum() + "\t" + sts.getName());
-                    // });
-                    // break;
-                    // }
+                        // System.out.println("=> Sorted by students roll number.");
+                        // System.out.println("\nRoll No. Name");
+                        // System.out.println("=============");
+                        // stuRollSort.forEach(sts -> {
+                        // System.out.println(sts.getRollNum() + "\t" + sts.getName());
+                        // });
+                        break;
+                        // TreeSet<Student> stuRollSort = new TreeSet<>(new RollNumComparator());
+                        // stuRollSort.addAll(students);
+
+                        // System.out.println("=> Sorted by students roll number.");
+                        // System.out.println("\nRoll No. Name");
+                        // System.out.println("=============");
+                        // stuRollSort.forEach(sts -> {
+                        // System.out.println(sts.getRollNum() + "\t" + sts.getName());
+                        // });
+                        // break;
+                    }
 
                     // case 3: {
                     // System.out.println("============= Sorting Students by Name(A-Za-z)
@@ -138,7 +144,29 @@ public class MapAssignment {
                         break;
                     }
 
-                    // case 5: {
+                    case 5: {
+                        System.out.println("============= Update Student Data ==============");
+                        System.out.println("=> Change student name by roll number.");
+                        Set<String> noStuRoll = new LinkedHashSet<>();
+                        System.out.print("Enter student roll number : => ");
+                        int inpStuRoll = sc.nextInt();
+
+                        students.forEach((k, v) -> {
+                            if (inpStuRoll == k) {
+                                System.out.print("Enter new name for roll number " + inpStuRoll + " student : => ");
+                                sc.nextLine();
+                                v.setName(sc.nextLine());
+                                System.out.println(
+                                        "=> Successful update Roll No. " + inpStuRoll + " student name.");
+                                noStuRoll.add("Shi Tal");
+                            }
+                        });
+
+                        if (noStuRoll.size() == 0)
+                            System.err.println("=> Input student roll number" + inpStuRoll + " doesn't exist!");
+                        break;
+                    }
+
                     // System.out.println("============= Update Student Data ==============");
                     // System.out.println("=> Change student name by roll number.");
                     // Set<String> noStuRoll = new LinkedHashSet<>();
@@ -163,43 +191,42 @@ public class MapAssignment {
                     // break;
                     // }
 
-                    // case 6: {
-                    // System.out.println("============= Search Student Name by Roll Number
-                    // ==============");
-                    // Set<String> noStuRoll = new LinkedHashSet<>();
-                    // System.out.print("Enter student Roll No. : => ");
-                    // int inpStuRoll = sc.nextInt();
+                    case 6: {
+                        System.out.println("============= Search Student Name by Roll Number ==============");
+                        Set<String> noStuRoll = new LinkedHashSet<>();
+                        System.out.print("Enter student Roll No. : => ");
+                        int inpStuRoll = sc.nextInt();
 
-                    // students.forEach(stu -> {
-                    // if (inpStuRoll == stu.getRollNum()) {
-                    // System.out.println("Name of roll no. " + inpStuRoll + " is : => " +
-                    // stu.getName());
-                    // noStuRoll.add("Shi Tal");
-                    // }
-                    // });
-                    // if (noStuRoll.size() == 0)
-                    // System.err.println("=> There is no student wih roll number " + inpStuRoll);
-                    // break;
-                    // }
+                        students.forEach((k, v) -> {
+                            if (inpStuRoll == k) {
+                                System.out.println("Name of roll no. " + inpStuRoll + " is : => " +
+                                        v.getName());
+                                noStuRoll.add("Shi Tal");
+                            }
+                        });
+                        if (noStuRoll.size() == 0)
+                            System.err.println("=> There is no student wih roll number " + inpStuRoll);
+                        break;
+                    }
 
-                    // case 7: {
-                    // System.out.println(
-                    // "============= Delete a Specific Student According to Roll No.
-                    // ==============");
-                    // Set<Student> oldStuSet = new LinkedHashSet<Student>(students);
+                    case 7: {
+                        System.out.println(
+                                "============= Delete a Specific Student According to Roll No. ==============");
+                        // Set<Integer,> oldStuSet = new LinkedHashSet<Student>(students);
+                        int oriSize = students.size();
 
-                    // System.out.print("Enter student Roll No. : => ");
-                    // int inpStuRoll = sc.nextInt();
-                    // students.removeIf(s -> s.getRollNum() == inpStuRoll);
+                        System.out.print("Enter student Roll No. : => ");
+                        int inpStuRoll = sc.nextInt();
+                        // students.removeIf(s -> s.getRollNum() == inpStuRoll);
+                        students.keySet().removeIf(k -> k.equals(inpStuRoll));
 
-                    // if (oldStuSet.size() != students.size())
-                    // System.out.println("=> Student with roll no. " + inpStuRoll + " is
-                    // removed.");
-                    // else
-                    // System.err.println("=> There is no student to remove with roll number " +
-                    // inpStuRoll);
-                    // break;
-                    // }
+                        if (oriSize != students.size())
+                            System.out.println("=> Student with roll no. " + inpStuRoll + " is removed.");
+                        else
+                            System.err.println("=> There is no student to remove with roll number " +
+                                    inpStuRoll);
+                        break;
+                    }
 
                     case 8: {
                         restartStatus = false;
@@ -237,21 +264,28 @@ public class MapAssignment {
 
 }
 
-// class RollNumComparator implements Comparator<Student> { // for roll number
-// sorting
+class RollNumComparator implements Comparator<Student> { // for roll number sorting
 
-// @Override
-// public int compare(Student s1, Student s2) {
-// return s1.getRollNum() - s2.getRollNum();
-// }
+    @Override
+    public int compare(Student s1, Student s2) {
+        return s1.getRollNum() - s2.getRollNum();
+    }
+    // @Override
+    // public int compare(Student s1, Student s2) {
+    // return s1.getRollNum() - s2.getRollNum();
+    // }
+    // @Override
+    // public int compareTo(Student stu1,) {
+    // return (int)( - stu.getRollNum());
+    // }
 
-// }
+}
 
-// class NameComparator implements Comparator<Student> { // for name sorting
+class NameComparator implements Comparator<Student> { // for name sorting
 
-// @Override
-// public int compare(Student s1, Student s2) {
-// return s1.getName().compareTo(s2.getName());
-// }
+    @Override
+    public int compare(Student s1, Student s2) {
+        return s1.getName().compareTo(s2.getName());
+    }
 
-// }
+}
