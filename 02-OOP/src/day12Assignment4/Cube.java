@@ -2,6 +2,11 @@ package day12Assignment4;
 
 public class Cube implements Shape {
 	private int x;
+	private String name;
+
+	public String getName() {
+		return name;
+	}
 
 	public Cube(int x) {
 		this.x = x;

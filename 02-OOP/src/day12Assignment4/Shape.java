@@ -6,4 +6,6 @@ public interface Shape {
 
 	public abstract double volume();
 
+	public abstract String getName();
+
 }
