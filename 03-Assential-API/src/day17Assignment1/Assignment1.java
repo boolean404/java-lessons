@@ -19,8 +19,7 @@ public class Assignment1 {
 		System.out.println("Name \t City");
 		System.out.println("=============");
 		salePeopleList.stream()
-				.filter(sp -> sp.getCity()
-				.equals("London") && sp.getComm() > 0.10)
+				.filter(sp -> sp.getCity().equals("London") && sp.getComm() > 0.10)
 				.forEach(sp -> System.out.println(sp.getName() + "\t" + sp.getCity()));
 
 		// 2
@@ -47,9 +46,7 @@ public class Assignment1 {
 		System.out.println("=====================");
 		salePeopleList.stream()
 				.limit(3)
-				.forEach(sp -> {
-			System.out.println(sp.getName() + "\t" + sp.getCity() + "\t" + sp.getComm());
-		});
+				.forEach(sp -> System.out.println(sp.getName() + "\t" + sp.getCity() + "\t" + sp.getComm()));
 
 		// 5
 		System.out.println("\n5.======= Who live in Rome =======");
@@ -57,9 +54,9 @@ public class Assignment1 {
 				.filter(sp -> sp.getCity().equals("Rome"))
 				.map(sp -> sp.getCity())
 				.collect(Collectors.toList());
-		if (liveInRome.size() != 0) {
+		if (liveInRome.size() != 0) 
 			liveInRome.forEach(System.out::println);
-		} else
+		 else
 			System.out.println("=> There is no sale people in 'Rome'");
 
 		// 6
@@ -72,11 +69,16 @@ public class Assignment1 {
 
 		// 7
 		System.out.println("\n7.======= List of sales people in descending order of commission =======");
-		System.out.println("Name \t City \t Comm");
-		System.out.println("=====================");
+
 		List<SalePeople> sortedList = salePeopleList.stream()
 				.sorted(Comparator.comparing(SalePeople::getComm).reversed())
 				.collect(Collectors.toList());
+
+		// list output of sale people in descending commission
+		System.out.println("List of sorted descending by comm : => " + sortedList);
+
+		System.out.println("\nName \t City \t Comm");
+		System.out.println("=====================");
 		sortedList.forEach(sp -> System.out.println(sp.getName() + "\t" + sp.getCity() + "\t" + sp.getComm()));
 
 	}

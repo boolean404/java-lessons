@@ -1,7 +1,7 @@
 package day17Assignment1;
 
 public class SalePeople {
-	
+
 	private String name, city;
 	private double comm;
 
@@ -14,6 +14,11 @@ public class SalePeople {
 
 	public String getName() {
 		return name;
+	}
+
+	@Override
+	public String toString() {
+		return "SalePeople [name=" + name + ", city=" + city + ", comm=" + comm + "]";
 	}
 
 	public void setName(String name) {
