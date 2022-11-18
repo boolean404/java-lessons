@@ -2,7 +2,7 @@ package day12Assignment4;
 
 public class Circle implements Shape {
 	private int radius;
-	private String name;
+	private String name = "Circle";
 
 	public String getName() {
 		return name;

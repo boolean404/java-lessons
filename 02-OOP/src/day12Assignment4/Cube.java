@@ -2,7 +2,7 @@ package day12Assignment4;
 
 public class Cube implements Shape {
 	private int x;
-	private String name;
+	private String name = "Cube";
 
 	public String getName() {
 		return name;
