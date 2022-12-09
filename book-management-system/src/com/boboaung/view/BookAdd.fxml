@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="720.0" prefWidth="1230.0"
+	xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19"
+	fx:controller="com.boboaung.controller.BookAdd">
+	<children>
+		<Label layoutX="565.0" layoutY="58.0" prefHeight="52.0"
+			prefWidth="234.0" text="Book Add" textFill="#22c8da">
+			<font>
+				<Font size="23.0" />
+			</font>
+		</Label>
+		<Separator layoutX="515.0" layoutY="110.0" prefWidth="200.0" />
+		<Label layoutX="396.0" layoutY="163.0" text="Book Title">
+			<font>
+				<Font size="16.0" />
+			</font>
+		</Label>
+		<TextField fx:id="txt_title" layoutX="547.0" layoutY="154.0"
+			prefHeight="39.0" prefWidth="345.0" promptText="Title" />
+		<Label layoutX="396.0" layoutY="230.0" text="Book Price">
+			<font>
+				<Font size="16.0" />
+			</font>
+		</Label>
+		<TextField fx:id="txt_price" layoutX="547.0" layoutY="221.0"
+			prefHeight="39.0" prefWidth="345.0" promptText="Price" />
+		<Label layoutX="396.0" layoutY="295.0" text="Publish Date">
+			<font>
+				<Font size="16.0" />
+			</font>
+		</Label>
+		<DatePicker fx:id="txt_publish_date" layoutX="547.0"
+			layoutY="286.0" prefHeight="39.0" prefWidth="345.0" promptText="Date" />
+		<Label layoutX="396.0" layoutY="367.0" text="Category">
+			<font>
+				<Font size="16.0" />
+			</font>
+		</Label>
+		<ComboBox fx:id="cbo_category" layoutX="547.0"
+			layoutY="358.0" prefHeight="39.0" prefWidth="345.0"
+			promptText="Choose Category" />
+		<Label layoutX="396.0" layoutY="435.0" text="Author">
+			<font>
+				<Font size="16.0" />
+			</font>
+		</Label>
+		<ComboBox fx:id="cbo_author" layoutX="547.0" layoutY="426.0"
+			prefHeight="39.0" prefWidth="345.0" promptText="Choose Author" />
+		<Button layoutX="401.0" layoutY="546.0" mnemonicParsing="false"
+			onAction="#btn_add_click" prefHeight="28.0" prefWidth="122.0"
+			style="-fx-background-color: #15ffeb;" text="Add" textFill="WHITE">
+			<cursor>
+				<Cursor fx:constant="HAND" />
+			</cursor>
+		</Button>
+		<Button layoutX="555.0" layoutY="546.0" mnemonicParsing="false"
+			onAction="#btn_reset_click" prefHeight="28.0" prefWidth="122.0"
+			style="-fx-background-color: #ff0000;" text="Reset" textFill="WHITE">
+			<cursor>
+				<Cursor fx:constant="HAND" />
+			</cursor>
+		</Button>
+		<Button layoutX="708.0" layoutY="546.0" mnemonicParsing="false"
+			onAction="#btn_back_click" prefHeight="28.0" prefWidth="122.0"
+			style="-fx-background-color: #55557f;" text="Back" textFill="WHITE">
+			<cursor>
+				<Cursor fx:constant="HAND" />
+			</cursor>
+		</Button>
+		<Button layoutX="563.0" layoutY="673.0" mnemonicParsing="false"
+			onAction="#btn_logout_click" prefHeight="26.0" prefWidth="102.0"
+			style="-fx-background-color: #00676c;" text="Log Out"
+			textFill="WHITE">
+			<cursor>
+				<Cursor fx:constant="HAND" />
+			</cursor>
+		</Button>
+		<Separator layoutX="110.0" layoutY="615.0" prefHeight="3.0"
+			prefWidth="981.0" />
+	</children>
+</AnchorPane>

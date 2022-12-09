@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="720.0" prefWidth="1230.0"
+	xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19"
+	fx:controller="com.boboaung.controller.Book">
+	<children>
+		<Button layoutX="189.0" layoutY="179.0" mnemonicParsing="false"
+			onAction="#btn_add_click" prefHeight="162.0" prefWidth="247.0"
+			style="-fx-background-color: #1ccaff;" text="Add" textFill="WHITE">
+			<cursor>
+				<Cursor fx:constant="HAND" />
+			</cursor>
+			<font>
+				<Font size="25.0" />
+			</font>
+		</Button>
+		<Button layoutX="491.0" layoutY="179.0" mnemonicParsing="false"
+			onAction="#btn_edit_click" prefHeight="162.0" prefWidth="247.0"
+			style="-fx-background-color: #55ff00;" text="Edit" textFill="WHITE">
+			<cursor>
+				<Cursor fx:constant="HAND" />
+			</cursor>
+			<font>
+				<Font size="25.0" />
+			</font>
+		</Button>
+		<Button layoutX="189.0" layoutY="391.0" mnemonicParsing="false"
+			onAction="#btn_delete_click" prefHeight="162.0" prefWidth="247.0"
+			style="-fx-background-color: #ff5500;" text="Delete" textFill="WHITE">
+			<cursor>
+				<Cursor fx:constant="HAND" />
+			</cursor>
+			<font>
+				<Font size="25.0" />
+			</font>
+		</Button>
+		<Button layoutX="491.0" layoutY="391.0" mnemonicParsing="false"
+			onAction="#btn_search_click" prefHeight="162.0" prefWidth="247.0"
+			style="-fx-background-color: #ffa96f;" text="Search" textFill="WHITE">
+			<cursor>
+				<Cursor fx:constant="HAND" />
+			</cursor>
+			<font>
+				<Font size="25.0" />
+			</font>
+		</Button>
+		<Button layoutX="794.0" layoutY="179.0" mnemonicParsing="false"
+			onAction="#btn_list_click" prefHeight="162.0" prefWidth="247.0"
+			style="-fx-background-color: #ffaaff;" text="List" textFill="WHITE">
+			<cursor>
+				<Cursor fx:constant="HAND" />
+			</cursor>
+			<font>
+				<Font size="25.0" />
+			</font>
+		</Button>
+		<Button layoutX="794.0" layoutY="391.0" mnemonicParsing="false"
+			onAction="#btn_back_click" prefHeight="162.0" prefWidth="247.0"
+			style="-fx-background-color: #55557f;" text="Back" textFill="WHITE">
+			<cursor>
+				<Cursor fx:constant="HAND" />
+			</cursor>
+			<font>
+				<Font size="25.0" />
+			</font>
+		</Button>
+		<Button layoutX="564.0" layoutY="638.0" mnemonicParsing="false"
+			onAction="#btn_logout_click" prefHeight="26.0" prefWidth="102.0"
+			style="-fx-background-color: #00676c;" text="Log Out"
+			textFill="WHITE">
+			<cursor>
+				<Cursor fx:constant="HAND" />
+			</cursor>
+		</Button>
+		<Label layoutX="515.0" layoutY="65.0" prefHeight="63.0"
+			prefWidth="403.0" text="Books Menu">
+			<font>
+				<Font name="System Bold" size="32.0" />
+			</font>
+		</Label>
+		<Separator layoutX="189.0" layoutY="608.0" prefHeight="4.0"
+			prefWidth="849.0" />
+	</children>
+</AnchorPane>

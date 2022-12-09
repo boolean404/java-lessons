@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1230.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.boboaung.controller.Main">
+	<children>
+		<Label layoutX="506.0" layoutY="65.0" text="Book Management System">
+			<font>
+				<Font name="Carlito" size="20.0" />
+			</font>
+		</Label>
+		<Separator layoutX="443.0" layoutY="111.0" prefHeight="4.0" prefWidth="346.0" />
+		<Pane layoutX="273.0" layoutY="158.0" onMouseClicked="#author_click" prefHeight="181.0" prefWidth="176.0">
+			<children>
+				<ImageView fitHeight="222.0" fitWidth="150.0" layoutX="13.0" pickOnBounds="true" preserveRatio="true">
+					<image>
+						<Image url="@../../../../assets/images/author.png" />
+					</image>
+				</ImageView>
+				<Label layoutX="64.0" layoutY="150.0" text="Author" textFill="#1bb97c" />
+				<Separator layoutX="16.0" layoutY="169.0" prefHeight="4.0" prefWidth="143.0" />
+			</children>
+			<cursor>
+				<Cursor fx:constant="HAND" />
+			</cursor>
+		</Pane>
+		<Pane layoutX="280.0" layoutY="405.0" onMouseClicked="#category_click" prefHeight="181.0" prefWidth="176.0">
+			<children>
+				<ImageView fitHeight="222.0" fitWidth="150.0" layoutX="13.0" pickOnBounds="true" preserveRatio="true">
+					<image>
+						<Image url="@../../../../assets/images/category.png" />
+					</image>
+				</ImageView>
+				<Label layoutX="64.0" layoutY="150.0" text="Category" textFill="#1bb97c" />
+				<Separator layoutX="16.0" layoutY="169.0" prefHeight="4.0" prefWidth="143.0" />
+			</children>
+			<cursor>
+				<Cursor fx:constant="HAND" />
+			</cursor>
+		</Pane>
+		<Pane layoutX="782.0" layoutY="147.0" onMouseClicked="#book_click" prefHeight="181.0" prefWidth="176.0">
+			<children>
+				<ImageView fitHeight="222.0" fitWidth="150.0" layoutX="13.0" pickOnBounds="true" preserveRatio="true">
+					<image>
+						<Image url="@../../../../assets/images/book.png" />
+					</image>
+				</ImageView>
+				<Label layoutX="64.0" layoutY="150.0" text="Book" textFill="#1bb97c" />
+				<Separator layoutX="16.0" layoutY="169.0" prefHeight="4.0" prefWidth="143.0" />
+			</children>
+			<cursor>
+				<Cursor fx:constant="HAND" />
+			</cursor>
+		</Pane>
+		<Pane layoutX="782.0" layoutY="401.0" onMouseClicked="#user_click" prefHeight="181.0" prefWidth="176.0">
+			<children>
+				<ImageView fitHeight="222.0" fitWidth="150.0" layoutX="13.0" pickOnBounds="true" preserveRatio="true">
+					<image>
+						<Image url="@../../../../assets/images/admin.png" />
+					</image>
+				</ImageView>
+				<Label layoutX="64.0" layoutY="150.0" text="User" textFill="#1bb97c" />
+				<Separator layoutX="16.0" layoutY="169.0" prefHeight="4.0" prefWidth="143.0" />
+			</children>
+			<cursor>
+				<Cursor fx:constant="HAND" />
+			</cursor>
+		</Pane>
+		<Button layoutX="566.0" layoutY="637.0" mnemonicParsing="false" onMouseClicked="#btn_logout_click" prefHeight="26.0" prefWidth="100.0" style="-fx-background-color: #00676c;" text="Log Out" textFill="#ebebeb">
+			<cursor>
+				<Cursor fx:constant="HAND" />
+			</cursor>
+		</Button>
+	</children>
+</AnchorPane>
